@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pacho Silver Landing</title>
+    <meta
+      name="description"
+      content="Terminal-inspired landing page styled with a black and silver palette."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="bg-noise" aria-hidden="true"></div>
+    <div class="bg-silver-glow" aria-hidden="true"></div>
+
+    <main class="page">
+      <header class="terminal-bar" aria-label="Window controls">
+        <span class="dot dot-silver"></span>
+        <span class="dot dot-gray"></span>
+        <span class="dot dot-dark"></span>
+        <p class="terminal-title">~/pacho --theme=silver-dark</p>
+      </header>
+
+      <section class="layout">
+        <aside class="layout-left" aria-label="Profile and links">
+          <article class="card intro-card reveal">
+            <div class="avatar-wrap" aria-hidden="true">
+              <div class="avatar-core"></div>
+            </div>
+            <h1>Pacho</h1>
+            <ul class="overview-list">
+              <li>21 year old</li>
+              <li>Made in Vietnam</li>
+              <li>Wandering the vast ocean ദ്ദി◝ ⩊ ◜.ᐟ</li>
+            </ul>
+          </article>
+
+          <article class="card reveal" style="--delay: 120ms">
+            <div class="section-head">
+              <h2>Socials</h2>
+            </div>
+            <ul class="overview-list links">
+              <li><a href="https://github.com/z3moo">GitHub</a></li>
+              <li><a href="https://blog.pachoalto.xyz">Blog</a></li>
+            </ul>
+          </article>
+        </aside>
+
+        <div class="layout-right">
+          <article class="card reveal">
+            <div class="section-head">
+              <h2>About me</h2>
+              <span class="prompt" id="prompt-text">$ loading...</span>
+            </div>
+            <p>Hey, I'm Quan.</p>
+            <p>2nd-year BSc @ <b>SoICT, Hanoi University of Science and Technology</b></p>
+            <p>Majoring in Information and Communication Technology</p>
+            <p>Currently working at <b>Viettel Cyber Security</b> as an <b>Incident Response Intern</b></p>
+            <p>Passionate about cybersecurity - blue team ops and digital forensics and eager to explore penetration testing</p>
+            <p>Actively participating in CTFs, a proud member of <b>BKSEC</b> - head of Forensics Div</p>
+          </article>
+
+          <article class="card reveal" style="--delay: 180ms">
+            <div class="section-head">
+              <h2>Work Experience</h2>
+            </div>
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="meta">2/2026 - present</span>
+                <h3>Viettel Cyber Security</h3>
+                <p>Incident Response Intern</p>
+                <small>On the way to becoming a Incident Response Specialist @ Viettel Cyber Security.</small>
+              </div>
+              <div class="timeline-item">
+                <span class="meta">3/2025 - present</span>
+                <h3>Bach Khoa Cyber Secruity Student Club</h3>
+                <p>Head of Forensics Division</p>
+                <small>A proud member of BKSEC.</small>
+              </div>
+              <div class="timeline-item">
+                <span class="meta">7/2025 - 1/2026</span>
+                <h3>CyStack</h3>
+                <p>Security Engineer Intern | Audit team</p>
+                <small>Learned about security auditing and risk assessment. As well as reversing, web developing skills</small>
+              </div>
+            </div>
+          </article>
+
+          <article class="card reveal" style="--delay: 260ms">
+            <div class="section-head">
+              <h2>Latest Projects</h2>
+            </div>
+            <div class="content-list">
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <footer class="footer reveal" style="--delay: 320ms">
+        <p>© <span id="year"></span> pacho</p>
+      </footer>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
