@@ -134,19 +134,17 @@ body {
   height: 116px;
   margin: 0 auto 1rem;
   border-radius: 999px;
-  display: grid;
-  place-items: center;
+  overflow: hidden;
   background: radial-gradient(circle at 30% 20%, rgba(246, 248, 251, 0.28), rgba(91, 101, 115, 0.25));
   box-shadow: 0 0 45px rgba(207, 214, 223, 0.18);
 }
 
-.avatar-core {
-  width: 64px;
-  height: 64px;
-  border-radius: 999px;
-  background:
-    conic-gradient(from 40deg, var(--silver-50), var(--silver-400), var(--silver-200), var(--silver-50));
-  filter: saturate(0.85);
+.avatar-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: inherit;
 }
 
 h1,
