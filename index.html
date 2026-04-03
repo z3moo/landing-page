@@ -17,7 +17,7 @@
     <script>
       (() => {
         const key = "theme-preference";
-        const pref = localStorage.getItem(key) || "system";
+        const pref = localStorage.getItem(key) || "dark";
         const isDark =
           pref === "dark" ||
           (pref !== "light" && window.matchMedia("(prefers-color-scheme: dark)").matches);
