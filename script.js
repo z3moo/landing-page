@@ -10,7 +10,7 @@ function getThemePreference() {
   if (saved === "light" || saved === "dark" || saved === "system") {
     return saved;
   }
-  return "dark";
+  return "system";
 }
 
 function resolveTheme(pref) {

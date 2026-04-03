@@ -17,10 +17,11 @@
     <script>
       (() => {
         const key = "theme-preference";
-        const pref = localStorage.getItem(key) || "dark";
+        const pref = localStorage.getItem(key);
         const isDark =
           pref === "dark" ||
-          (pref !== "light" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+          ((pref === null || pref === "system") &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches);
         document.documentElement.classList.toggle("dark", isDark);
       })();
     </script>
