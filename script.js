@@ -1,8 +1,3 @@
-const yearElement = document.getElementById("year");
-if (yearElement) {
-  yearElement.textContent = String(new Date().getFullYear());
-}
-
 const THEME_STORAGE_KEY = "theme-preference";
 
 function getThemePreference() {
@@ -71,13 +66,18 @@ initThemeToggle();
 const promptElement = document.getElementById("prompt-text");
 const phrases = [
   "$ whoami",
-  "$ ls -la ~/Work Experience",
+  "$ ls -la ~/Experience",
   "$ ls -la ~/Projects",
 ];
+const longestPhraseLength = Math.max(...phrases.map((phrase) => phrase.length));
 
 let phraseIndex = 0;
 let charIndex = 0;
 let deleting = false;
+
+if (promptElement) {
+  promptElement.style.setProperty("--prompt-width", `${longestPhraseLength}ch`);
+}
 
 function animatePrompt() {
   if (!promptElement) return;
@@ -100,7 +100,8 @@ function animatePrompt() {
     }
   }
 
-  promptElement.textContent = fullPhrase.slice(0, charIndex);
+  const nextText = fullPhrase.slice(0, charIndex);
+  promptElement.textContent = nextText || "\u00A0";
   setTimeout(animatePrompt, deleting ? 35 : 55);
 }
 

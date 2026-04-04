@@ -325,9 +325,11 @@ small {
 .prompt {
   display: inline-flex;
   align-items: center;
+  justify-content: flex-start;
   border: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
   color: var(--text-muted);
   font-size: 0.78rem;
+  min-width: var(--prompt-width, auto);
   padding: 0.25rem 0.55rem;
   border-radius: 999px;
   white-space: nowrap;
@@ -415,32 +417,9 @@ small {
   margin: 0.3rem 0 0.5rem;
 }
 
-.footer {
-  margin-top: 1.35rem;
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  background: linear-gradient(180deg, color-mix(in srgb, var(--panel) 88%, #ffffff 12%), var(--panel-2));
-  padding: 0.9rem 1rem;
-  display: flex;
-  justify-content: space-between;
-  gap: 0.8rem;
-  flex-wrap: wrap;
-  box-shadow: var(--surface-shadow);
-}
-
 .disable-transitions,
 .disable-transitions * {
   transition: none !important;
-}
-
-.footer a {
-  color: var(--text-soft);
-  text-decoration: none;
-}
-
-.footer a:hover,
-.footer a:focus-visible {
-  color: var(--text);
 }
 
 .reveal {
